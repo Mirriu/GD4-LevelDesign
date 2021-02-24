@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     private void Start() 
     {
         instance = this;
-        transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - 10);
+        transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - 6);
     }
 
     private void Update() 
