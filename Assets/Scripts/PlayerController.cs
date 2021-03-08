@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     public int speed;
     public float maxSpeed;
 
+    public float jumpStrength;
+
     public bool moving;
 
     public Interactable currentInteractable;
@@ -62,6 +64,12 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate() 
     {
+        if(Input.GetButton("Jump") && Grounded())
+        {
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpStrength, rigidbody.velocity.z);
+        }
+
+
         if(moving)
         {
             Vector3 force = CameraMovement.GetCameraDirection() * new Vector3(movementDirection.x * speed, 0, movementDirection.y * speed);
@@ -101,5 +109,10 @@ public class PlayerController : MonoBehaviour
         {
             currentInteractable = null;
         }
+    }
+
+    private bool Grounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, .7f);
     }
 }
