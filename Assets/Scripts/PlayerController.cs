@@ -33,11 +33,9 @@ public class PlayerController : MonoBehaviour
         text.text = currentInteractable ? currentInteractable.name: "";
         if(currentInteractable)
         {
-            if(Input.GetKey(KeyCode.Q) && (currentInteractable.pickup || (!currentInteractable.pickup && keys > 0)))
+            if(Input.GetKeyDown(KeyCode.Q) && (currentInteractable.pickup || (!currentInteractable.pickup && keys > 0)))
             {
-                currentInteractable.gameObject.SetActive(false);
-                keys = currentInteractable.pickup ? keys + 1: 0;
-                currentInteractable = null;
+                currentInteractable.UseKey(ref currentInteractable, ref keys);
             }
         }
         if(Input.GetKey(KeyCode.W))
