@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         text.text = currentInteractable ? currentInteractable.name: "";
         if(currentInteractable)
         {
-            if(Input.GetKey(KeyCode.Space) && (currentInteractable.pickup || (!currentInteractable.pickup && keys > 0)))
+            if(Input.GetKey(KeyCode.Q) && (currentInteractable.pickup || (!currentInteractable.pickup && keys > 0)))
             {
                 currentInteractable.gameObject.SetActive(false);
                 keys = currentInteractable.pickup ? keys + 1: 0;
@@ -64,12 +64,6 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate() 
     {
-        if(Input.GetButton("Jump") && Grounded())
-        {
-            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpStrength, rigidbody.velocity.z);
-        }
-
-
         if(moving)
         {
             Vector3 force = CameraMovement.GetCameraDirection() * new Vector3(movementDirection.x * speed, 0, movementDirection.y * speed);
@@ -79,6 +73,10 @@ public class PlayerController : MonoBehaviour
             }
             moving = false;
             movementDirection = Vector2.zero;
+        }
+        if(Input.GetKeyDown(KeyCode.Space) && Grounded())
+        {
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpStrength, rigidbody.velocity.z);
         }
     }
 
