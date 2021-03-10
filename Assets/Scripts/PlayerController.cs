@@ -8,15 +8,14 @@ public class PlayerController : MonoBehaviour
     new Rigidbody rigidbody;
     public Vector2 movementDirection;
     public int speed;
-    public float maxSpeed;
 
     public float jumpStrength;
-
-    public bool moving;
 
     public Interactable currentInteractable;
 
     int keys;
+
+    bool jumping;
 
     Text text;
 
@@ -24,7 +23,6 @@ public class PlayerController : MonoBehaviour
     {
         movementDirection = Vector2.zero;
         rigidbody = GetComponent<Rigidbody>();
-        moving = false;
         text = GetComponentInChildren<Text>();
         keys = 0;
     }
@@ -41,38 +39,35 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKey(KeyCode.W))
         {
             movementDirection.y = 1;
-            moving = true;
         }
         else if(Input.GetKey(KeyCode.S))
         {
             movementDirection.y = -1;
-            moving = true;
         }
         if(Input.GetKey(KeyCode.D))
         {
             movementDirection.x = 1;
-            moving = true;
         }
         else if(Input.GetKey(KeyCode.A))
         {
             movementDirection.x = -1;
-            moving = true;
         }
         movementDirection.Normalize();
+        if(Input.GetKeyDown(KeyCode.Space) && Grounded())
+        {
+            jumping = true;
+        }
+        if(Input.GetKeyUp(KeyCode.Space))
+        {
+            jumping = false;
+        }
     }
     private void FixedUpdate() 
     {
-        if(moving)
-        {
-            Vector3 force = CameraMovement.GetCameraDirection() * new Vector3(movementDirection.x * speed, 0, movementDirection.y * speed);
-            if(rigidbody.velocity.magnitude + force.magnitude <= maxSpeed)
-            {
-                rigidbody.AddForce(force);
-            }
-            moving = false;
-            movementDirection = Vector2.zero;
-        }
-        if(Input.GetKeyDown(KeyCode.Space) && Grounded())
+        Vector3 force = CameraMovement.GetCameraDirection() * new Vector3(movementDirection.x * speed, 0, movementDirection.y * speed);
+        rigidbody.velocity = new Vector3(force.x, rigidbody.velocity.y, force.z);
+        movementDirection = Vector2.zero;
+        if(jumping)
         {
             rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpStrength, rigidbody.velocity.z);
         }
@@ -109,6 +104,6 @@ public class PlayerController : MonoBehaviour
 
     private bool Grounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, .7f);
+        return Physics.Raycast(transform.position, Vector3.down, 1);
     }
 }
