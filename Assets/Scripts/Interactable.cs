@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
 
     public int amountOfNeededKeys;
 
+    public bool interactable;
+
     public void UseKey(ref Interactable interactable, ref int key)
     {
         if(!pickup && key > 0)
