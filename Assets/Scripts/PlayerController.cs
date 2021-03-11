@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) 
     {
-        if(other.gameObject.GetComponent<Interactable>())
+        if(other.gameObject.GetComponent<Interactable>() && other.gameObject.GetComponent<Interactable>().interactable)
         {
             currentInteractable = other.gameObject.GetComponent<Interactable>();
         }
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) 
     {
-        if(other.gameObject.GetComponent<Interactable>())
+        if(other.gameObject.GetComponent<Interactable>() && other.gameObject.GetComponent<Interactable>().interactable)
         {
             currentInteractable = other.gameObject.GetComponent<Interactable>();
         }
