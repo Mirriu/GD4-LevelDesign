@@ -50,4 +50,4 @@ Material:
     - _WindQuality: 4
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
+    - _HueVariation: {r: 1, g: 0.7038608, b: 0.1273585, a: 0.1}

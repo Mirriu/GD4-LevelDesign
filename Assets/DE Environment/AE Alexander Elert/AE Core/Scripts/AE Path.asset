@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dcfa0475d8b21e4486ba4d1e13c1c70, type: 3}
+  m_Name: AE Path
+  m_EditorClassIdentifier: 
+  password: DE_PATHMANAGER
+  publisher: 1
+  Paths:
+  - name: C.V.P - Eucalyptus Forest 2.0 (Standard)
+    renderPipeline: 0
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader Standard.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/Standard Render Pipeline/SRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - A Quiet Place (Standard)
+    - Prefab Viewer (Standard)
+  - name: C.V.P - Japanese Garden 2.0 (Standard)
+    renderPipeline: 0
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader Standard.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/Standard Render Pipeline/SRP.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/Standard Render Pipeline/SRP.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Ancient Temple (Standard)
+    - Prefab Viewer (Standard)
+  - name: C.V.P - Eucalyptus Forest 2.0 (HDRP 7.4.3)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader HDRP 7_4_3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/HDRP/HDRP-7.4.3.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - A Quiet Place (HDRP 7.4.3)
+    - Prefab Viewer (HDRP 7.4.3)
+  - name: C.V.P - Japanese Garden 2.0 (HDRP 7.4.3)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader HDRP 7_4_3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/HDRP/HDRP-7.4.3.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Ancient Temple (HDRP 7.4.3)
+    - Prefab Viewer (HDRP 7.4.3)
+  - name: C.V.P - Eucalyptus Forest 2.0 (HDRP 7.5.1)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader HDRP 7_5_1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/HDRP/HDRP-7.5.1.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - A Quiet Place (HDRP 7.5.1)
+    - Prefab Viewer (HDRP 7.5.1)
+  - name: C.V.P - Japanese Garden 2.0 (HDRP 7.5.1)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader HDRP 7_5_1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/HDRP/HDRP-7.5.1.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Ancient Temple (HDRP 7.5.1)
+    - Prefab Viewer (HDRP 7.5.1)
+  - name: C.V.P - Eucalyptus Forest 2.0 (HDRP 8.2.0)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader HDRP 8_2_0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/HDRP/HDRP-8.2.0.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - A Quiet Place (HDRP 8.2.0)
+    - Prefab Viewer (HDRP 8.2.0)
+  - name: C.V.P - Japanese Garden 2.0 (HDRP 8.2.0)
+    renderPipeline: 1
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader HDRP 8_2_0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/HDRP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/HDRP/HDRP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/HDRP/HDRP-8.2.0.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Ancient Temple (HDRP 8.2.0)
+    - Prefab Viewer (HDRP 8.2.0)
+  - name: C.V.P - Eucalyptus Forest 2.0 (URP 7.4.3)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader URP 7_4_3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/URP/URP-7.4.3.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - A Quiet Place (URP 7.4.3)
+    - Prefab Viewer (URP 7.4.3)
+  - name: C.V.P - Japanese Garden 2.0 (URP 7.4.3)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader URP 7_4_3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-7.4.3.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/URP/URP-7.4.3.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Ancient Temple (URP 7.4.3)
+    - Prefab Viewer (URP 7.4.3)
+  - name: C.V.P - Eucalyptus Forest 2.0 (URP 7.5.1)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader URP 7_5_1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/URP/URP-7.5.1.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - A Quiet Place (URP 7.5.1)
+    - Prefab Viewer (URP 7.5.1)
+  - name: C.V.P - Japanese Garden 2.0 (URP 7.5.1)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader URP 7_5_1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-7.5.1.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/URP/URP-7.5.1.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Ancient Temple (URP 7.5.1)
+    - Prefab Viewer (URP 7.5.1)
+  - name: C.V.P - Eucalyptus Forest 2.0 (URP 8.2.0)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader URP 8_2_0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Render
+      Pipelines Demo Versions/URP/URP-8.2.0.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/A-Quiet-Place/A-Quiet-Place.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Eucalyptus Forest/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - A Quiet Place (URP 8.2.0)
+    - Prefab Viewer (URP 8.2.0)
+  - name: C.V.P - Japanese Garden 2.0 (URP 8.2.0)
+    renderPipeline: 2
+    packagePaths:
+    - Assets/DE Environment/DE Core/Shaders/DEC Shader URP 8_2_0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/AE Core/Shared Assets/Post-Processing-Profiles/Unity-PostProcessing/URP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Assets/Materials/Render
+      Pipelines Material Versions/URP/URP-8.2.0.unitypackage
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Render
+      Pipelines Demo Versions/URP/URP-8.2.0.unitypackage
+    scenePaths2018: []
+    names2018: []
+    scenePaths2019:
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Ancient-Temple/Ancient-Temple.unity
+    - Assets/DE Environment/AE Alexander Elert/C.V.P - Japanese Garden/Demos/Prefabs-Viewer/Prefab-Viewer.unity
+    names2019:
+    - Ancient Temple (URP 8.2.0)
+    - Prefab Viewer (URP 8.2.0)
