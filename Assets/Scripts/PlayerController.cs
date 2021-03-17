@@ -9,13 +9,10 @@ public class PlayerController : MonoBehaviour
     public Vector2 movementDirection;
     public int speed;
 
-    public float jumpStrength;
-
     public Interactable currentInteractable;
 
     int keys;
 
-    bool jumping;
 
     Text text;
 
@@ -31,7 +28,7 @@ public class PlayerController : MonoBehaviour
         text.text = currentInteractable ? currentInteractable.name: "";
         if(currentInteractable)
         {
-            if(Input.GetKeyDown(KeyCode.Q) && (currentInteractable.pickup || (!currentInteractable.pickup && keys > 0)))
+            if(Input.GetKeyDown(KeyCode.Q) && (currentInteractable.pickup || (!currentInteractable.pickup && keys > 0) || currentInteractable.endState))
             {
                 currentInteractable.UseKey(ref currentInteractable, ref keys);
             }
@@ -53,24 +50,12 @@ public class PlayerController : MonoBehaviour
             movementDirection.x = -1;
         }
         movementDirection.Normalize();
-        if(Input.GetKeyDown(KeyCode.Space) && Grounded())
-        {
-            jumping = true;
-        }
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            jumping = false;
-        }
     }
     private void FixedUpdate() 
     {
         Vector3 force = CameraMovement.GetCameraDirection() * new Vector3(movementDirection.x * speed, 0, movementDirection.y * speed);
         rigidbody.velocity = new Vector3(force.x, rigidbody.velocity.y, force.z);
         movementDirection = Vector2.zero;
-        if(jumping)
-        {
-            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpStrength, rigidbody.velocity.z);
-        }
     }
 
     private void OnCollisionEnter(Collision other) 
@@ -100,10 +85,5 @@ public class PlayerController : MonoBehaviour
         {
             currentInteractable = null;
         }
-    }
-
-    private bool Grounded()
-    {
-        return Physics.Raycast(transform.position, Vector3.down, 1);
     }
 }
