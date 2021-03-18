@@ -10,6 +10,7 @@ public class CameraMovement : MonoBehaviour
         return instance;
     }
     public GameObject player;
+    public GameObject player_model;
 
     public float height;
     public float rotationSideways;
@@ -18,26 +19,30 @@ public class CameraMovement : MonoBehaviour
     private void Start() 
     {
         instance = this;
-        transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - 6);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z );
     }
 
     private void Update() 
     {
-        if(Input.GetKey(KeyCode.LeftArrow))
+        //if(Input.GetKey(KeyCode.LeftArrow))
+        
         {
-            Rotate(rotationSpeed);
-            rotationSideways+= rotationSpeed;
-        }
-        else if(Input.GetKey(KeyCode.RightArrow))
-        {
-            Rotate(-rotationSpeed);
-            rotationSideways-= rotationSpeed;
+            Rotate(Input.GetAxis("Mouse X") * rotationSpeed);
+
+        //    Rotate(rotationSpeed);
+        //    rotationSideways+= rotationSpeed;
+        //}
+        //else if(Input.GetKey(KeyCode.RightArrow))
+        //{
+        //    Rotate(-rotationSpeed);
+        //    rotationSideways-= rotationSpeed;
         }
         transform.position = new Vector3(transform.position.x, player.transform.position.y + height, transform.position.z);
     }
     void Rotate(float speed)
     {
         transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.up, speed);
+        player_model.transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.up, speed);
     }
     public static Quaternion GetCameraDirection()
     {
