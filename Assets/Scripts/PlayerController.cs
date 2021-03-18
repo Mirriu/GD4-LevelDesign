@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start() 
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         movementDirection = Vector2.zero;
         rigidbody = GetComponent<Rigidbody>();
         text = GetComponentInChildren<Text>();
@@ -55,12 +57,9 @@ public class PlayerController : MonoBehaviour
         movementDirection.Normalize();
         if(Input.GetKeyDown(KeyCode.Space) && Grounded())
         {
-            jumping = true;
+            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpStrength, rigidbody.velocity.z);
         }
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            jumping = false;
-        }
+
     }
     private void FixedUpdate() 
     {
@@ -69,7 +68,7 @@ public class PlayerController : MonoBehaviour
         movementDirection = Vector2.zero;
         if(jumping)
         {
-            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpStrength, rigidbody.velocity.z);
+           
         }
     }
 
