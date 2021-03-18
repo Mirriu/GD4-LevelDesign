@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Interactable currentInteractable;
 
     int keys;
+    Animator animation;
 
 
     Text text;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         text = GetComponentInChildren<Text>();
         keys = 0;
+        animation = GetComponentInChildren<Animator>();
     }
     private void Update() 
     {
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour
         {
             movementDirection.x = -1;
         }
+        animation.SetBool("Walking", movementDirection.magnitude > 0);
         movementDirection.Normalize();
     }
     private void FixedUpdate() 
