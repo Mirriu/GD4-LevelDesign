@@ -24,15 +24,18 @@ public class CameraMovement : MonoBehaviour
 
     private void Update() 
     {
-        if(Input.GetKey(KeyCode.LeftArrow))
+        //if(Input.GetKey(KeyCode.LeftArrow))
+        
         {
-            Rotate(rotationSpeed);
-            rotationSideways+= rotationSpeed;
-        }
-        else if(Input.GetKey(KeyCode.RightArrow))
-        {
-            Rotate(-rotationSpeed);
-            rotationSideways-= rotationSpeed;
+            Rotate(Input.GetAxis("Mouse X") * rotationSpeed);
+
+        //    Rotate(rotationSpeed);
+        //    rotationSideways+= rotationSpeed;
+        //}
+        //else if(Input.GetKey(KeyCode.RightArrow))
+        //{
+        //    Rotate(-rotationSpeed);
+        //    rotationSideways-= rotationSpeed;
         }
         transform.position = new Vector3(transform.position.x, player.transform.position.y + height, transform.position.z);
     }
