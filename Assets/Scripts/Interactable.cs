@@ -12,6 +12,16 @@ public class Interactable : MonoBehaviour
     public bool interactable;
     public bool endState;
 
+    public Light l;
+
+    private void Start() {
+        if(l == null)
+        {
+            l = GetComponent<Light>();
+        }
+        l.enabled = interactable;
+    }
+
     public void UseKey(ref Interactable interactable, ref int key)
     {
         if(endState)

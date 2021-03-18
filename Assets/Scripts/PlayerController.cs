@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Update() 
     {
-        text.text = currentInteractable ? currentInteractable.name: "";
+       // text.text = currentInteractable ? currentInteractable.name: "";
         if(currentInteractable)
         {
             if(Input.GetKeyDown(KeyCode.Q) && (currentInteractable.pickup || (!currentInteractable.pickup && keys > 0) || currentInteractable.endState))
