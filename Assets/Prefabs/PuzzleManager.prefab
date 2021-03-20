@@ -158,6 +158,7 @@ MonoBehaviour:
   interactable: 0
   endState: 0
   l: {fileID: 1611668888}
+  soundEffect: {fileID: 8300000, guid: 79fb574379d237949a6bf17e3f907552, type: 3}
 --- !u!1 &1154298347
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +209,7 @@ MonoBehaviour:
   interactable: 0
   endState: 0
   l: {fileID: 1979369262}
+  soundEffect: {fileID: 8300000, guid: 79fb574379d237949a6bf17e3f907552, type: 3}
 --- !u!65 &1154298349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -802,6 +804,7 @@ MonoBehaviour:
   interactable: 0
   endState: 0
   l: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 79fb574379d237949a6bf17e3f907552, type: 3}
 --- !u!108 &360662880
 Light:
   m_ObjectHideFlags: 0
@@ -976,6 +979,7 @@ MonoBehaviour:
   interactable: 0
   endState: 0
   l: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 79fb574379d237949a6bf17e3f907552, type: 3}
 --- !u!108 &1358818562
 Light:
   m_ObjectHideFlags: 0
@@ -1103,6 +1107,7 @@ MonoBehaviour:
   interactable: 1
   endState: 0
   l: {fileID: 2115308200}
+  soundEffect: {fileID: 8300000, guid: 79fb574379d237949a6bf17e3f907552, type: 3}
 --- !u!1 &1302632740027055669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1221,7 @@ MonoBehaviour:
   interactable: 0
   endState: 0
   l: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 79fb574379d237949a6bf17e3f907552, type: 3}
 --- !u!108 &264289057
 Light:
   m_ObjectHideFlags: 0
@@ -1407,6 +1413,7 @@ MonoBehaviour:
   interactable: 0
   endState: 1
   l: {fileID: 163527114}
+  soundEffect: {fileID: 8300000, guid: 79fb574379d237949a6bf17e3f907552, type: 3}
 --- !u!1 &4733112674190938906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,6 +1527,7 @@ MonoBehaviour:
   interactable: 1
   endState: 0
   l: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 79fb574379d237949a6bf17e3f907552, type: 3}
 --- !u!108 &1154228598
 Light:
   m_ObjectHideFlags: 0
@@ -1694,6 +1702,7 @@ MonoBehaviour:
   interactable: 0
   endState: 0
   l: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 79fb574379d237949a6bf17e3f907552, type: 3}
 --- !u!108 &294336219
 Light:
   m_ObjectHideFlags: 0

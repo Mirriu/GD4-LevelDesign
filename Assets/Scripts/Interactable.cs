@@ -14,7 +14,13 @@ public class Interactable : MonoBehaviour
 
     public Light l;
 
-    private void Start() {
+    [SerializeField] private AudioClip soundEffect;
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        if(animator != null) animator.enabled = false;
         if(l == null)
         {
             l = GetComponent<Light>();
@@ -35,7 +41,7 @@ public class Interactable : MonoBehaviour
             amountOfNeededKeys--;
             if(amountOfNeededKeys <= 0)
             {
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
                 interactable = null;
             }
         }
@@ -45,5 +51,20 @@ public class Interactable : MonoBehaviour
             gameObject.SetActive(false);
             interactable = null;
         }
+        if(soundEffect != null)
+        {
+            SoundEffectPlayer.PlaySound(soundEffect, 1f, transform);
+        }
+        if(animator != null)
+        {
+            animator.enabled = true;
+            var col = GetComponent<Collider>();
+            if (col != null) col.enabled = false; 
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }
+
