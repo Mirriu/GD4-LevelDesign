@@ -20,6 +20,11 @@ public class CameraMovement : MonoBehaviour
     {
         instance = this;
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z );
+
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        //stop removing this >:(
     }
 
     private void Update() 

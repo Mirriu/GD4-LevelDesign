@@ -9,31 +9,28 @@ public class PlayerController : MonoBehaviour
     public Vector2 movementDirection;
     public int speed;
 
-    public float jumpStrength;
-
     public Interactable currentInteractable;
 
     int keys;
+    Animator animation;
 
-    bool jumping;
 
     Text text;
 
     private void Start() 
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         movementDirection = Vector2.zero;
         rigidbody = GetComponent<Rigidbody>();
         text = GetComponentInChildren<Text>();
         keys = 0;
+        animation = GetComponentInChildren<Animator>();
     }
     private void Update() 
     {
-        text.text = currentInteractable ? currentInteractable.name: "";
+       // text.text = currentInteractable ? currentInteractable.name: "";
         if(currentInteractable)
         {
-            if(Input.GetKeyDown(KeyCode.Q) && (currentInteractable.pickup || (!currentInteractable.pickup && keys > 0)))
+            if(Input.GetKeyDown(KeyCode.Q) && (currentInteractable.pickup || (!currentInteractable.pickup && keys > 0) || currentInteractable.endState))
             {
                 currentInteractable.UseKey(ref currentInteractable, ref keys);
             }
@@ -54,22 +51,14 @@ public class PlayerController : MonoBehaviour
         {
             movementDirection.x = -1;
         }
+        animation.SetBool("Walking", movementDirection.magnitude > 0);
         movementDirection.Normalize();
-        if(Input.GetKeyDown(KeyCode.Space) && Grounded())
-        {
-            rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpStrength, rigidbody.velocity.z);
-        }
-
     }
     private void FixedUpdate() 
     {
         Vector3 force = CameraMovement.GetCameraDirection() * new Vector3(movementDirection.x * speed, 0, movementDirection.y * speed);
         rigidbody.velocity = new Vector3(force.x, rigidbody.velocity.y, force.z);
         movementDirection = Vector2.zero;
-        if(jumping)
-        {
-           
-        }
     }
 
     private void OnCollisionEnter(Collision other) 
@@ -99,10 +88,5 @@ public class PlayerController : MonoBehaviour
         {
             currentInteractable = null;
         }
-    }
-
-    private bool Grounded()
-    {
-        return Physics.Raycast(transform.position, Vector3.down, 1);
     }
 }
