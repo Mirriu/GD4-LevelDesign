@@ -28,37 +28,17 @@ public class CameraMovement : MonoBehaviour
 
     private void Update() 
     {
-        //if(Input.GetKey(KeyCode.LeftArrow))
-        
-        {
-           Rotate(Input.GetAxis("Mouse X") * rotationSpeed, Input.GetAxis("Mouse Y") * rotationSpeed);
-           
-
-
-            //    Rotate(rotationSpeed);
-            //    rotationSideways+= rotationSpeed;
-            //}
-            //else if(Input.GetKey(KeyCode.RightArrow))
-            //{
-            //    Rotate(-rotationSpeed);
-            //    rotationSideways-= rotationSpeed;
-        }
+        Rotate(Input.GetAxis("Mouse X") * rotationSpeed, Input.GetAxis("Mouse Y") * rotationSpeed);
         transform.position = new Vector3(transform.position.x, player.transform.position.y + height, transform.position.z);
     }
     void Rotate(float x, float y)
     {
-
-        y = Mathf.Clamp(y,-90f, 90f);
-
-        //transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.up, x);
-        transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.right, y);
+        Vector3 temp = Quaternion.Euler(transform.localEulerAngles) * Vector3.right;
+        transform.RotateAround(transform.position, temp, y);
+        transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.up, x);
         player_model.transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.up, x);
-
-
-        
-
-        //transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.up, speed);
-        //player_model.transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.up, speed);
+        float clamp = transform.localEulerAngles.x < 180 ? Mathf.Clamp(transform.localRotation.eulerAngles.x, 0,30) : Mathf.Clamp(transform.localRotation.eulerAngles.x, 330,360);
+        transform.localEulerAngles = new Vector3(clamp, transform.localEulerAngles.y, 0);
     }
     public static Quaternion GetCameraDirection()
     {
