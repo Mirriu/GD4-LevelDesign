@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour
     public GameObject player_model;
 
     public float height;
-    public int rotationSpeed;
+    public float rotationSpeed;
 
     private void Start() 
     {
@@ -34,7 +34,7 @@ public class CameraMovement : MonoBehaviour
     void Rotate(float x, float y)
     {
         Vector3 temp = Quaternion.Euler(transform.localEulerAngles) * Vector3.right;
-        transform.RotateAround(transform.position, temp, y);
+        transform.RotateAround(transform.position, temp, y * -0.2f);
         transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.up, x);
         player_model.transform.RotateAround(new Vector3(player.transform.position.x, 0, player.transform.position.z), Vector3.up, x);
         float clamp = transform.localEulerAngles.x < 180 ? Mathf.Clamp(transform.localRotation.eulerAngles.x, 0,30) : Mathf.Clamp(transform.localRotation.eulerAngles.x, 330,360);

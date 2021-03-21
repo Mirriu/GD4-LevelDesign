@@ -101,8 +101,7 @@ MonoBehaviour:
   player: {fileID: 526875493944769135}
   player_model: {fileID: 7876366959229354424}
   height: 1.9
-  rotationSideways: 0
-  rotationSpeed: 1
+  rotationSpeed: 0.2
 --- !u!114 &1970409094901061947
 MonoBehaviour:
   m_ObjectHideFlags: 0
